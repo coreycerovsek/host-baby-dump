@@ -1,0 +1,1231 @@
+/*
+		Backdrop Clearshot
+		design - Stacy Bias
+		html/css - Andy Lee
+		andy@cdbaby.com
+		6-27-2012
+*/
+
+
+/* Reset
+------------------------------------------------------------------------------*/
+
+html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, samp, small, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,  caption {
+	background-color: transparent;
+	border-bottom-width: 0;
+	border-left-width: 0;
+	border-right-width: 0;
+	border-top-width: 0;
+	font-size: 100%;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0;
+	vertical-align: baseline;
+}
+
+q {
+	quotes: none;
+}
+
+q:before,
+q:after {
+	content: none;
+}
+
+a, ins, del {
+	text-decoration: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+#content img,
+#right_sidebar .widget_content img {
+	max-width: 100%;
+	height:auto;
+}
+
+#content a.image-link,
+#content a.image-link:hover,
+#sidebar a.image-link,
+#sidebar a.image-link:hover,
+#content a.image-link img,
+#content a.image-link:hover img,
+#sidebar a.image-link img,
+#sidebar a.image-link:hover img {
+	background-color:transparent;
+	border:none;
+}
+
+/* Accessibility Navigation & Hide
+------------------------------------------------------------------------------*/
+
+#accessibility_nav,
+.hide {
+	height: 1px;
+	left: -999em;
+	position: absolute;
+	top: -999em;
+	width: 1px;
+}
+
+/* Clearfix
+------------------------------------------------------------------------------*/
+
+.clearfix:after,
+.title:after,
+.container_page:after,
+#navigation ul ul:after,
+.widget_calendar li:after,
+.container_12:after,
+#social:after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* Body Styling
+------------------------------------------------------------------------------*/
+
+html,
+body {
+	height:100%;
+	display:block;
+	min-width:450px;
+}
+html {
+	background-color:#FFFFFF;
+}
+
+#bg {
+	background-image: url('../../../img/coreywebsite2.jpg');
+	background-repeat:no-repeat;
+	background-position: left top;
+	background-attachment: fixed;
+	background-size:cover;
+	z-index:1;
+	margin:0;
+	padding:0;
+	width:100%;
+	display:block;
+	min-height:100%;
+	margin-bottom:-35px;
+	}
+
+#wrapper {
+	top:0;
+	left:0;
+	width:100%;
+	display:block;
+}
+
+
+
+/* Site Title
+------------------------------------------------------------------------------*/
+
+.site_title {
+	position:relative;
+	z-index:2;
+}
+
+.site_title h2 {
+	font-family:'Oswald',sans-serif;
+	font-size: 2.5em;
+	margin-bottom:25px;
+	margin-left:auto;
+	margin-right:auto;
+	text-shadow:1px 1px 1px #545454;
+	width:98%;
+}
+
+h2 span{
+	visibility: visible;
+	text-transform:uppercase;
+}
+
+.site_title h2 span a {
+	color:#ffffff;
+}
+
+/* Navigation
+------------------------------------------------------------------------------*/
+#tinynav1 {
+	display: none;
+	color: #FFFFFF;
+	background-color: #0357ab;
+}
+
+#navigation {
+	max-width:250px;
+	position:relative;
+	display:block;
+	z-index: 2;
+	float:left;
+	margin-bottom:35px;
+	margin-left:20px;
+}
+
+#navigation ul li {
+	font-size:2em;
+	font-family:'Oswald',sans-serif;
+	font-weight: bold;
+	text-transform:uppercase;
+	line-height:1.2em;
+  text-shadow:1px 1px 1px #545454;
+  margin-bottom:5px;
+}
+
+#navigation ul li a {
+	color:#a1a48f;
+	padding:3px;
+	display:block;
+	-webkit-transition:All .25s ease-in;
+	-moz-transition:All .25s ease-in;
+	-o-transition:All .25s ease-in;
+}
+
+#navigation ul li.current a,
+#navigation ul li a:hover,
+#navigation ul li:hover a,
+#navigation ul li:hover ul li a:hover {
+	color: #ffffff;
+	background-color:transparent;
+}
+
+#navigation ul li ul li {
+	font-size:.75em;
+	margin-bottom: 0;
+}
+
+#navigation ul ul li a,
+#navigation ul li.current ul li a
+#navigation ul li a:hover ul li a,
+#navigation ul li:hover ul li a{
+	color:#FFFFFF;
+	background-color:#0357ab;
+	cursor: pointer;
+	-webkit-transition:All .15s ease-in;
+	-moz-transition:All .15s ease-in;
+	-o-transition:All .15s ease-in;
+}
+
+#navigation ul li:hover ul {
+	opacity:1;
+	top: 0;
+	-webkit-transition:All .2s ease-in;
+	-moz-transition:All .2s ease-in;
+	-o-transition:All .2s ease-in;
+	position:relative;
+}
+
+#navigation ul ul {
+	opacity:0;
+	top:-9999px;
+	margin: 0;
+	position: absolute;
+	z-index: 2;
+	margin-left:35px;
+	background-color:#0357ab;
+  -webkit-box-shadow: 0 10px 20px rgba(50, 50, 50, .75);
+	-moz-box-shadow:    0 10px 20px rgba(50, 50, 50, .75);
+	box-shadow:         0 10px 20px rgba(50, 50, 50, .75);
+}
+
+#navigation ul ul li a {
+	display:block;
+}
+
+/* Content
+------------------------------------------------------------------------------*/
+.container ul,
+.container ol {
+	margin-left:15px;
+	padding-left:15px;
+	padding-bottom:15px;
+}
+
+.container ul ul,
+.container ol ol {
+	padding-bottom: 0;
+}
+
+.container ul li {
+	list-style-type:disc;
+}
+
+.container ol li {
+	list-style-type:decimal;
+}
+
+.container {
+	position:relative;
+	max-width:45%;
+	min-width:35%;
+	font-family: 'Oswald',sans-serif;
+	z-index: 1;
+	display:block;
+	float:left;
+	margin-bottom:50px;
+	margin-left:20px;
+}
+
+#content .contact_form_container {
+	width:auto;
+}
+
+#content {
+	background-color:rgba(219,219,219,.6);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#99dbdbdb', endColorstr='#99dbdbdb');
+	text-align:left;
+	overflow:hidden;
+}
+
+#content p,
+#content .entry {
+	padding:10px;
+	color:#242424;
+}
+
+#content .entry:not(.instagram_gallery),
+#content .p:not(.ig_user) {
+	font-size:0.9em;
+}
+
+#content .entry {
+	display:block;
+}
+
+body:not(.photo) #content a:not(.ig_follow) {
+	background-color:transparent;
+	color:#1f225c;
+	-webkit-transition:All .25s ease-in;
+	-moz-transition:All .25s ease-in;
+	-o-transition:All .25s ease-in;
+}
+
+#body:not(.photo) content a:hover {
+	background-color:#FFFFFF;
+	color:#1f225c;
+	-webkit-transition:All .25s ease-in;
+	-moz-transition:All .25s ease-in;
+	-o-transition:All .25s ease-in;
+}
+
+#content h3 {
+	text-transform:uppercase;
+	padding-bottom:5px;
+}
+
+h3.entry_title,
+.guestbook #content h3,
+.press #content h3,
+.playlist_title {
+	color:#242424;
+	font-size:1.25em;
+}
+
+.hbshare {
+	color: #242424;
+	margin: 0;
+	padding:6px;
+}
+
+/* Audio Page
+------------------------------------------------------------------------------*/
+
+ul.audio_tracks{
+	margin-bottom: 10px;
+	margin-top: 10px;
+	padding-left: 0;
+	padding-bottom: 0;
+}
+
+ul.audio_tracks li {
+	line-height: 2em;
+	list-style-type:none;
+}
+
+.audio_tracks li a {
+	padding: 3px;
+}
+
+.audio_post .entry_meta {
+	color:#242424;
+}
+
+.audio_post .entry_author,
+.audio_post .entry_date,
+.audio_post .writer_credits {
+	float:left;
+	margin-right:5px;
+}
+
+.track .progress_bar_bg,
+.track .progress_indicator {
+	background-color: #242424;
+}
+.track .progress_bar_bg {
+	opacity: 0.25;
+}
+#track_meta_row span.tracktime,
+.album-tracks span.tracktime {
+	word-wrap: normal;
+}
+
+/* Bio Page
+
+------------------------------------------------------------------------------*/
+
+.bio h3.entry_title span {
+	color:#242424;
+}
+
+.bio h3.entry_title span.title_role {
+	font-size:.75em;
+}
+
+
+/* Blog page
+------------------------------------------------------------------------------*/
+
+.blog h3.entry_title,
+.blog .be_the_first h3 {
+	font-size:1.25em;
+	color:#242424;
+}
+
+.blog .entry_comments h3,
+.blog .content_form h3 {
+	font-size:1.25em;
+}
+
+.blog .entry_author,
+.blog .entry_date,
+.blog .comment_name,
+.blog .comment_date {
+	color:#242424;
+	font-style: italic;
+}
+
+.read_more_link {
+	font-size: 1.75em;
+	font-weight: bold;
+}
+
+h2 a.blog_rss_feed {
+	margin-left:15px;
+}
+
+.rss {
+	padding-bottom:15px;
+	margin-bottom:15px;
+}
+
+.blog .comment_body {
+	padding:2.5%;
+}
+
+/* Calendar page
+------------------------------------------------------------------------------*/
+
+#future_header,
+#past_header {
+	text-align: left;
+	padding-top:5px;
+	padding-right:5px;
+	padding-left:5px;
+	font-size: 1.75em;
+	text-transform: uppercase;
+	padding-bottom: 5px;
+	color: #242424;
+}
+
+.calendar_post {
+	padding-bottom: 25px;
+}
+
+#content .calendar_post h3 {
+	font-size:1.75em;
+	font-weight: bold;
+	padding: 0;
+	text-transform: none;
+	color:#242424;
+}
+
+.calendar_post .venue {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.calendar_post .entry_content {
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+.calendar_post h4 {
+	font-weight:normal;
+}
+.details,
+.blog_post {
+	line-height: 1.5em;
+	padding-top:5px;
+	margin:auto;
+}
+
+/* Contact page
+------------------------------------------------------------------------------*/
+
+.contact #content h3 {
+	font-size:1.25em;
+	color:#242424;
+}
+
+#content .contact input, #content .contact textarea, .contact_form_textbox, .contact_form_textbox input, .contact_form_dropdown, .contact_form_dropdown select, .contact_form_textarea, .contact_form_textarea textarea, .contact_form_multi, .contact_form_multi input {
+    display: inline-block !important;
+    margin: 0 !important;
+    text-align: left;
+}
+
+.contact #content li {
+	list-style-type:none;
+	padding:5px;
+}
+
+.container .contact_form_instructions {
+	width:100%;
+}
+
+.contact_form_container {
+	min-width: 85%;
+}
+
+.contact_form_submit {
+	background-color:#1f225c;
+	color:#ffffff;
+	cursor:pointer;
+}
+
+#comment_form {
+	margin: 0 auto;
+}
+
+#comment_form li {
+	margin-bottom: 7px;
+	list-style-type:none;
+}
+
+#comment_form label {
+	display: block;
+	color:#242424;
+}
+
+#comment_form .required {
+	font-weight: bold;
+}
+
+#comment_form input[type="text"],
+#comment_form textarea {
+	max-width: 95%;
+	min-width:85%;
+}
+
+#comment_form textarea {
+	resize: none;
+}
+
+#comment_errors p,
+.be_the_first {
+	font-style: italic;
+	font-weight: bold;
+	text-align: center;
+}
+
+#recaptcha_widget_div input {
+	color: #000;
+}
+
+
+/* Guestbook page
+------------------------------------------------------------------------------*/
+.guestbook #comment_form {
+	margin:auto;
+}
+
+.guestbook #comment_form input,
+.guestbook #comment_form textarea {
+	min-width:85%;
+}
+
+#content .guestbook_post {
+	padding-bottom: 15px;
+	padding-left:15px;
+	padding-top: 0;
+}
+
+.guestbook_post .entry_content {
+	padding-left: 25px;
+}
+
+#guestbook_button {
+	background-color:#1f225c;
+	color:#ffffff;
+	margin-top:20px;
+	font-size:1.5em;
+	cursor:pointer;
+}
+
+/* Photo page
+------------------------------------------------------------------------------*/
+
+#content li.photo_post {
+	float:left;
+	list-style-type:none;
+	margin:10px;
+}
+
+#content li.photo_post a {
+	background-color:transparent;
+}
+
+#photo #content ul {
+	padding-bottom:5px;
+}
+
+/* Press page
+------------------------------------------------------------------------------*/
+
+.press #content .entry_meta {
+	font-style:italic;
+}
+
+
+/* Widget section
+------------------------------------------------------------------------------*/
+#right_sidebar {
+	position:relative;
+	color:#242424;
+	width:271px;
+	font-family:'Oswald',sans-serif;
+	float:right;
+	margin-right:2%;
+	margin-bottom:35px;
+}
+
+.widget_container {
+	padding:10px;
+	margin-bottom:15px;
+	background-color: rgba(219,219,219,.6);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#99dbdbdb', endColorstr='#99dbdbdb');
+	overflow:hidden;
+}
+
+.widget_content p {
+	font-size:.7em;
+}
+.widget_content a {
+	color:#1f225c;
+	background-color:transparent;
+}
+
+.widget_content a img {
+	border:none;
+}
+
+.widget_content a:hover {
+	background-color:#FFFFFF;
+	color:#1f225c;
+	-webkit-transition:All .25s ease-in;
+	-moz-transition:All .25s ease-in;
+	-o-transition:All .25s ease-in;
+}
+
+.widget_content h4,
+#right_sidebar .widget_container h3 {
+	font-size: .75em;
+	font-family:'Oswald',sans-serif;
+	color:#242424;
+	padding-bottom:5px;
+	text-transform:uppercase;
+}
+
+.widget_listbaby h3 {
+	display:none;
+}
+
+.widget_container input.submit {
+	background-color:	#1f225c;
+	color:#ffffff;
+	border: 0;
+	font-family:'Oswald',sans-serif;
+	font-size:15px;
+	height:25px;
+	margin-left: 0;
+	margin-top: 5px;
+	cursor:pointer;
+}
+
+.widget_container input#email {
+	border-width:1px;
+	border-color:#000;
+	height:20px;
+	font-family:'Oswald',sans-serif;
+	font-size: 15px;
+	width:100%;
+}
+
+.widget_content{
+	width:230px;
+	margin:auto;
+}
+
+.widget_calendar .widget_content{
+	font-size: .7em;
+	font-weight: bold;
+}
+
+.widget_calendar .tour_date{
+	width:30%;
+	float:left;
+}
+
+.widget_calendar .tour_location {
+	width:60%;
+	float:right;
+}
+
+.widget_calendar li {
+	border-bottom-color: #1f225c;
+	border-bottom-width:1px;
+  border-bottom-style: dashed;
+  padding-top:4px;
+  padding-bottom:4px;
+  display:block;
+  cursor: pointer;
+}
+
+
+
+/* Footer
+------------------------------------------------------------------------------*/
+footer {
+	position: relative;
+	bottom: 0;
+	left:0;
+	color:#242424;
+	font-size:.75em;
+	font-weight: normal;
+	font-family:'Oswald',sans-serif;
+	display:block;
+	text-align:right;
+	height:15px;
+	width:100%;
+	float:right;
+}
+
+footer p {
+	background-color:rgba(219,219,219,.6);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#99dbdbdb', endColorstr='#99dbdbdb');
+	padding:10px;
+}
+
+.footer a {
+	color: #1f225c;
+}
+
+/* Media queries
+--------------------------------------------------------------------------------------*/
+@media screen and (max-width: 1100px) {
+	html, body {
+		min-width: 0;
+	}
+	.site_title h2 {
+		font-size: 2em;
+		margin-bottom: 15px;
+	}
+	.site_title h2 span{
+		padding: 0;
+	}
+	.site_title,
+	#navigation {
+		position:relative;
+	}
+	.container {
+		min-width:80%;
+		max-width: 100%;
+		margin-left:5%;
+		margin-right:5%;
+		margin-top: 0;
+		padding-top: 0;
+		left:0;
+		top:0;
+	}
+	#right_sidebar {
+		margin-left:5%;
+		top:0;
+		max-width:90%;
+		float:left;
+		margin-top:15px;
+	}
+	
+	#navigation {
+		display:inline-block;
+		width:100%;
+		margin: 0;
+		margin-top: 0;
+		padding-top: 0;
+		margin-bottom:1.5%;
+		padding-bottom: 0;
+		margin-bottom: 0;
+		max-width:100%;
+	}
+	#navigation ul li {
+		display: inline-block;
+		padding: 0 1em;
+		font-size: 1em;
+	}
+	.container {
+		margin-bottom: 0;
+		width: 100%;
+		margin: 0;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.container {
+		max-width: 100%;
+	}
+	.site_title h2 {
+		font-size: 1.6em;
+		margin-bottom: 5px;
+	}
+	#tinynav1 {
+		display: block;
+		-webkit-appearance: none !important;
+		background-repeat: no-repeat;
+		background-position: 97% center;
+		border: 1px solid #0357ab;
+		padding: 5px;
+		margin: 0;
+		width:100%;
+	}
+	#navigation .nav_list {
+		display: none;
+	}
+	#navigation ul li {
+		font-size: 1.1em;
+	}
+	#bg {
+		background-image:none;
+	}
+	.recaptchatable .recaptcha_r1_c1,
+  .recaptchatable .recaptcha_r2_c1,
+  .recaptchatable .recaptcha_r7_c1,
+  .recaptchatable .recaptcha_r8_c1,
+  .recaptchatable .recaptcha_r3_c1,
+  .recaptchatable .recaptcha_r3_c2,
+  .recaptchatable .recaptcha_r3_c3,
+  .recaptchatable .recaptcha_r4_c4,
+  .recaptchatable .recaptcha_r4_c2  {
+  	display:none;
+  	background:none;
+  }
+  #recaptcha_area .recaptchatable .recaptcha_r4_c1,
+  .recaptchatable .recaptcha_r4_c2,
+  .recaptchatable .recaptcha_r4_c4
+   {
+	  background-image:none;
+  }
+  #recaptcha_area .recaptcha_input_area {
+	  margin-left:5px !important;
+  }
+	#recaptcha_table,
+	#recaptcha_area { width:216px!important;}
+  #recaptcha_widget_div {
+	  width: 216px;
+	  overflow:hidden;
+	  background:white;
+	  padding:5px;
+	 }
+  .recaptchatable #recaptcha_image,
+  .recaptchatable #recaptcha_image img  { width: 200px; }
+  .recaptchatable .recaptcha_image_cell {
+	  width:200px;
+  }
+}
+
+/* Pagination */
+#pagination a.pagination_element.pagination_digit,
+#pagination a.pagination_element.pagination_next,
+#pagination a.pagination_element.pagination_prev,
+#pagination a.pagination_element.pagination_first,
+#pagination a.pagination_element.pagination_last {
+border-color: #1f225c;
+color: #1f225c;
+}
+
+#pagination .pagination_element.pagination_current {
+color: #242424;
+}
+
+/* Audio views */
+
+.pause_button_icon,
+.play_button_icon {
+	fill:#1f225c;
+}
+
+/* Breadcrumb styling */
+
+#breadcrumbs-wrapper #breadcrumbs {
+	margin: 8px 0 0 8px;
+}
+
+#breadcrumbs-wrapper #breadcrumbs li {
+	color: #242424;
+}
+
+#breadcrumbs-wrapper #breadcrumbs a:hover {
+	color: #1f225c;
+	background-color: #FFFFFF;
+}
+
+/* Overrides for albums and tracks */
+
+#album-meta .album-description,
+.audio .album-notes-inner {
+	font-size: 0.9em;
+}
+
+.audio #album-meta .album-purchase,
+.audio #album-meta .album-purchase ul,
+.audio #album-meta .album-purchase ul a,
+.audio #album-meta .album-purchase ul a:hover {
+	background-color: #1f225c;
+	color: #ffffff;
+}
+
+#album-meta .album-purchase ul li {
+	border-top-color: #ffffff;
+}
+
+#track-list .album-tracks li,
+.audio .album-notes-outer,
+#album-wrapper .album-description {
+	border-top-color: #242424;
+}
+
+#album-meta .meta-description-divider,
+#track_fullview .track_details.track_details_divider {
+	border-bottom-color: #242424;
+}
+
+.audio .album-wrapper #album-meta h3.album-artist {
+	text-transform: none;
+	margin-bottom: 10px;
+}
+
+.buy_album_button ul {
+	padding: 0;
+	left: 0;
+}
+
+.album-purchase ul li {
+	border-top-color: #ffffff;
+}
+
+.album-purchase ul li a {
+	margin: 3px 0;
+}
+
+.audio #album-meta .album-meta-text h1,
+.audio #album-meta .album-meta-text h2,
+.audio #album-meta .album-meta-text h3,
+#track_fullview h1,
+#track_fullview h2,
+#track_fullview h3 {
+	color: #242424;
+}
+
+.album-purchase .buy_album_button {
+	border-color: #1f225c;
+}
+
+.audio #album-meta .album-meta-text h2.album-title,
+.audio #track_meta_row h2.title {
+	color: #242424;
+}
+
+/* Instagram styling */
+
+#content a.ig_follow {
+	background-color:#1f225c;
+	color:#ffffff;
+}
+
+.instagram_gallery {
+	border-bottom-color: #242424;
+}
+
+.instagram_meta p {
+	margin-bottom:5px !important;
+}
+/* Contact Form */
+
+.float_left
+{
+	float: left;
+}
+
+/* Only in Builder */
+.add_field_div
+{
+	margin-top: 2px;
+}
+
+.add_field
+{
+	cursor: pointer;
+	color: #317598;
+	font-size: 14px;
+}
+
+.add_field_desc
+{
+	color: #666666;
+	font-size: 11px;
+	margin-left: 12px;
+}
+
+.builder_td
+{
+	padding: 0;
+	width: 250px;
+}
+
+.builder_fieldset {
+	background-color: #FFFFFF;
+	border: 2px solid #68B0B9;
+	height: 100%;
+	padding: 10px;
+	text-align: left;
+	width: 220px;
+}
+
+#recipient_email_address,
+#instructions,
+#text_label,
+#textarea_label,
+#textarea_default_text,
+#dropdown_label,
+#dropdown_choices,
+#checkbox_label,
+#checkbox_choices,
+#radiobutton_label,
+#radiobutton_choices
+{
+	width: 210px;
+}
+
+#instructions,
+#textarea_default_text,
+#dropdown_choices,
+#checkbox_choices,
+#radiobutton_choices
+{
+	height: 70px;
+}
+
+#instructions {
+	resize: vertical;
+}
+
+#contact_form_builder_target
+{
+	width: 430px;
+	text-align: left;
+}
+
+#contact_form_builder_modal
+{
+	background-color: #ffffff;
+}
+
+.contact_form_container
+{
+	width: 375px;
+	margin-bottom: 20px;
+}
+
+
+#content #contacts input,	#content #contacts	textarea,
+.contact_form_textbox,	.contact_form_textbox	input,
+.contact_form_dropdown,	.contact_form_dropdown	select,
+.contact_form_textarea,	.contact_form_textarea	textarea,
+.contact_form_multi,	.contact_form_multi		input		/* for checkboxes and radiobuttons */
+{
+	display: -moz-inline-stack !important;
+	display: inline-block !important;
+	margin: 0 !important;
+	text-align: left;
+	resize: none;
+}
+
+/*
+ * this stylesheet is used both dashboard and public side.
+ * limit cursor-help for form building to dashboard side.
+ * possible bug: if a person names their page "website"... yep
+ */
+#website
+{
+	#content #contacts input,	#content #contacts	textarea,
+	.contact_form_textbox,	.contact_form_textbox	input,
+	.contact_form_dropdown,	.contact_form_dropdown	select,
+	.contact_form_textarea,	.contact_form_textarea	textarea,
+	.contact_form_multi,	.contact_form_multi		input		/* for checkboxes and radiobuttons */
+	{
+		cursor: move;
+	}
+}
+
+/*
+#content #contacts input, #content #contacts textarea
+{
+	width: 300px !important;
+}
+*/
+
+.contact_form_textbox,	.contact_form_textbox	input,
+.contact_form_dropdown,	.contact_form_dropdown	select,
+.contact_form_textarea,	.contact_form_textarea	textarea
+{
+	border-style: dotted;
+	border-width: 1px;
+	border-color: #444444;
+	width: 100% !important;
+}
+
+.contact_form_textarea, .contact_form_textarea	textarea
+{
+	height: 100px !important;
+}
+
+#content #contacts input:focus, #content #contacts textarea:focus, #content #contacts select:focus
+{
+/*	background-color:#ffffe3; */
+	border:1px solid #5D88D5;
+}
+
+/* Blarm */
+
+.contact_form_row						/* used only in builder */
+{
+	margin-bottom: 6px;
+}
+
+.contact_form_builder_instructions		/* used only in builder */
+{
+	margin: 10px 7px 0 40px;
+}
+
+.contact_form_instructions				/* used only in published page */
+{
+	width: 375px;
+	margin: 10px 0 10px 0;
+}
+
+.contact-form-builder-warning
+{
+	color: red;
+	background-color: #fff;
+	border: 0 solid red;
+	font-weight: bold;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+.x_delete,				/* used only in builder */
+.spacer_20px,			/* used in both builder and published page */
+.contact_form_label,	/* used in both builder and published page */
+.contact_form_element,	/* used in both builder and published page */
+.target_fieldset,		/* used only in builder */
+.contact_form_submit	/* used only in published page */
+{
+	display: -moz-inline-stack !important;
+	display: inline-block !important;
+}
+
+.contact_form_submit	/* used only in published page */
+{
+	text-align: center !important;
+	width: 85px !important;
+}
+
+.x_delete				/* used only in builder */
+{
+	width: 20px;
+	vertical-align: top;
+	cursor: pointer;
+}
+
+.spacer_20px			/* used in both builder and published page */
+{
+	width: 20px;
+}
+
+.contact_form_label		/* used in both builder and published page */
+{
+	text-align: left;
+	width: 100px;
+	vertical-align: top;
+	margin: 0 0 6px 0;
+}
+
+.contact_form_element	/* used in both builder and published page */
+{
+	text-align: left;
+	width: 225px;
+	margin: 0 0 6px 0;
+}
+
+.target_fieldset		/* used only in builder */
+{
+	width: 425px;
+	min-height: 375px;
+	background: #fff;
+	border:2px solid #68B0B9;
+}
+
+#contacts #gbimage		/* used only in published page */
+{
+	border: none;
+	background: #000000;
+	padding: 0;
+}
+
+table.borderless form 
+{
+margin-top: 0;
+}
+
+label.contact_form_instruction
+{
+background-color: #FFFFFF;
+}

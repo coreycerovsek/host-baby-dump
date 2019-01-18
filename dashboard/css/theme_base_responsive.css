@@ -1,0 +1,118 @@
+/* Universal CSS for all responsive themes */
+@media screen and (max-width: 550px) {
+	.responsive_hide {
+		display: none;
+	}
+
+	.responsive_show,
+	.audio #album-wrapper a.responsive_show {
+		display: block;
+	}
+
+	#album-meta .album-cover-wrapper {
+		width: 100%;
+		float: none;
+		margin: 10px auto;
+	}
+
+	.audio #album-meta .album-purchase {
+		float: none;
+		width: 100%;
+		margin-top: 10px;
+		margin-left: 0;
+	}
+
+	#album-meta h2.album-title {
+		text-align: center;
+	}
+
+	.album-purchase ul {
+		position: relative;
+		display: block;
+	}
+
+	#album-meta .album-meta-text {
+		text-align: center;
+	}
+
+	#album-meta .album-purchase ul a {
+		background-color: transparent;
+	}
+
+	#album-meta .album-purchase ul li a {
+		width: 70%;
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		display: block;
+		padding: 0;
+		margin: 0;
+	}
+
+	#album-meta .album-purchase ul li a:after {
+		content:none;
+	}
+
+	#album-meta .album-purchase .buy_album_button {
+		padding: 0;
+	}
+
+	.audio #album-meta .album-purchase a.buy_button {
+		display: block;
+		width: 50px;
+		text-align: center;
+		background-color: rgba(255,255,255,0.3);
+		border-radius: 5px;
+		text-indent: 0;
+		font-size: .75em;
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		left: auto;
+	}
+
+	.audio #album-meta .album-purchase a.buy_button:hover {
+		background-color: rgba(200,200,200,0.3);
+	}
+
+	#album-meta .album-purchase ul li {
+		display: block;
+		position: relative;
+		height: 1.5em;
+	}
+
+	#album-wrapper .album-purchase ul li:first-of-type {
+		border-top: none;
+	}
+
+	.audio .album-notes-inner {
+		padding: 5px;
+	}
+
+	#album-wrapper .album-tracks li span.story,
+	#album-wrapper .album-tracks li span.lyrics,
+	#album-wrapper .album-tracks li span.download,
+	#album-wrapper .album-tracks li:hover .story,
+	#album-wrapper .album-tracks li:hover .lyrics,
+	#album-wrapper .album-tracks .playing .lyrics,
+	#album-wrapper .album-tracks .playing .story,
+	#track_meta_row span.download {
+		display: none;
+	}
+
+	.album-tracks span.title {
+		width: 55%;
+	}
+
+	#track_fullview .track_details,
+	#track_fullview .story,
+	#track_fullview .lyrics {
+		margin: 0;
+		padding: 5px;
+	}
+
+	#track_meta_row span.tracktime,
+	.album-tracks span.tracktime {
+		width: 3em;
+	}
+}

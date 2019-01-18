@@ -1,0 +1,840 @@
+
+div.jp-audio {
+	width:195px;
+	padding:0;
+	margin: 0 auto 0 auto;
+	height: 242px;
+	overflow: hidden;
+	font-size: 14px;
+	font-family: Arial,Verdana,sans-serif;
+	line-height: 1.6;
+	color: #ffffff;
+	background: no-repeat;
+	background-position: bottom;
+	background-color: transparent;
+	background-image: url('../dashboard/img/jplayer/black_translucent/gradient_footer.png');
+	border-color: #000000;
+	border-radius: 6px;
+	position: relative;
+	text-align: left;
+}
+
+/* NORMALIZATIONS */
+div.jp-audio ul li {
+	background-color: transparent;
+	font-size: 10px;
+	margin:0;
+	padding:0;
+	font-weight: normal;
+}
+
+div.jp-audio a {
+	outline: none;
+	padding:0;
+	margin:0;
+}
+
+div.jp-header {
+	height:36px;
+	padding:10px 6px 6px 5px;
+	background-image: url('../dashboard/img/jplayer/black_translucent/gradient_header.png');
+	background-repeat: no-repeat;
+	font-weight: normal;
+	overflow: hidden;
+	line-height: 2.0;
+}
+
+div.jp-header .current-title{
+	font-size: 14px;
+	position:relative;
+	white-space: nowrap;
+	width: auto;
+}
+
+div.jp-header .current-artist{
+	font-size: 11px;
+	top: -4px;
+	position: relative;
+	white-space: nowrap;
+	width: auto;
+}
+
+div.jp-header ul.jp-controls a {
+	text-indent: -9999px;
+}
+div.jp-header ul.jp-controls .facebook {
+	text-indent: 0;
+	position: absolute;
+	top:5px;
+	right:5px;
+	width:12px;
+	height: 19px;
+}
+
+div.jp-interface {
+	position: relative;
+	width:100%;
+	border-color: #ffffff;
+	height: 52px;
+	background:no-repeat;
+	background-color: transparent;
+	background-image: url('../dashboard/img/jplayer/black_translucent/gradient_player.png');
+	border-top: 1px solid #fff;
+	border-top-color: #ffffff;
+	border-bottom: 1px solid #fff;
+	border-bottom-color: #ffffff;
+}
+
+/* @group CONTROLS */
+
+div.jp-controls-holder {
+	clear: both;
+	width:440px;
+	margin:0 auto 10px auto;
+	position: relative;
+	overflow:hidden;
+}
+
+div.jp-interface ul.jp-controls {
+	list-style-type:none;
+	overflow:hidden;
+	width: 195px;
+	height: 52px;
+}
+
+div.jp-audio ul.jp-controls {
+	margin:0 auto;
+}
+
+div.jp-video ul.jp-controls {
+	margin:0 0 0 115px;
+	float:left;
+	display:inline; /* need this to fix IE6 double margin */
+}
+
+div.jp-interface ul.jp-controls li {
+	display:inline;
+	float: left;
+	background: transparent;
+}
+div.jp-interface ul.jp-controls a {
+	display:block;
+	overflow:hidden;
+	text-indent:-9999px;
+	padding: 0;
+}
+
+div.jp-type-playlist .jp-play {
+	background-image: url('../dashboard/img/jplayer/black_translucent/play.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 49px;
+	height:52px;
+	position:absolute;
+	top:0;
+	left:0;
+
+}
+
+div.jp-type-playlist .jp-pause {
+	background-image: url('../dashboard/img/jplayer/black_translucent/pause.png');
+	background-repeat: no-repeat;
+	width:49px;
+	height:52px;
+	position:absolute;
+	top:9px;
+	left:8px;
+}
+
+/* @group progress bar */
+
+div.jp-progress {
+	background-color: #b1b1b1;
+	width: 131px;
+	height: 6px;
+	padding: 1px;
+	border-radius: 10px;
+	margin-bottom: 4px;
+	overflow:hidden;
+	position: absolute;
+	top:25px;
+	right:5px;
+}
+
+div.jp-seek-bar {
+	background-color: #b1b1b1;
+	height:6px;
+	overflow:hidden;
+	cursor:pointer;
+}
+
+div.jp-play-bar {
+	background-color: #2b2b2b;
+	border-radius: 10px;
+	height: 100%;
+	overflow:hidden;
+}
+
+
+/* @end */
+
+
+/* sleep message*/
+
+div.jp-sleep {
+   font-size: 11px;
+	height: 35px;
+	margin-bottom: 4px;
+	overflow: hidden;
+	padding: 1px;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	width: 131px;
+}
+
+/* end sleep message */
+
+
+/* @group volume controls */
+
+ul.jp-controls a.jp-mute,
+ul.jp-controls a.jp-unmute,
+ul.jp-controls a.jp-volume-max {
+	position: absolute;
+	width: 8px;
+	height: 16px;
+}
+
+div.jp-audio ul.jp-controls a.jp-mute,
+div.jp-audio ul.jp-controls a.jp-unmute {
+	top:27px;
+	left: 141px;
+}
+
+div.jp-audio ul.jp-controls a.jp-volume-max {
+	top:-6px;
+	right: 0;
+}
+
+ul.jp-controls a.jp-mute{
+	background-image: url('../dashboard/img/jplayer/black_translucent/speaker.png');
+	background-repeat: no-repeat;
+}
+
+ul.jp-controls a.jp-unmute {
+	background-image: url('../dashboard/img/jplayer/black_translucent/speaker.png');
+	background-repeat: no-repeat;
+}
+
+.jp-header .ui-state-default,
+.jp-header .ui-widget-content .ui-state-default,
+.jp-header .ui-widget-header .ui-state-default {
+	border: none;
+	background: #B1B1B1 none;
+}
+.jp-header .ui-state-hover,
+.jp-header .ui-widget-content .ui-state-hover,
+.jp-header .ui-widget-header .ui-state-hover,
+.jp-header .ui-state-focus,
+.jp-header .ui-widget-content .ui-state-focus,
+.jp-header .ui-widget-header .ui-state-focus {
+	border: none;
+	background: #B1B1B1 none;
+	cursor:  pointer;
+}
+.jp-header .ui-state-active,
+.jp-header .ui-widget-content .ui-state-active,
+.jp-header .ui-widget-header .ui-state-active {
+	border: none;
+	background: #B1B1B1 none;
+}
+
+.jp-header .ui-slider {
+	background-color: #ffffff;
+	position: absolute;
+	top:27px;
+	right:5px;
+	width: 35px;
+	text-align: left;
+}
+.jp-header .ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 8px;
+	height: 9px;
+	cursor: default;
+	background-color: transparent;
+	background-image: url('../dashboard/img/jplayer/black_translucent/volume_knob.png');
+	background-repeat: no-repeat;
+}
+.jp-header .ui-slider .ui-slider-range { position: absolute; z-index: 1; font-size: 1em; display: block; border: 0; background-position: 0 0; }
+
+.jp-header .ui-slider-horizontal { height: 3px; border: none; margin:7px 0; }
+.jp-header .ui-slider-horizontal .ui-slider-handle { top: -3px; margin-left: -5px; }
+.jp-header .ui-slider-horizontal .ui-slider-range { top: 0; height: 100%; }
+.jp-header .ui-slider-horizontal .ui-slider-range-min { left: 0; }
+.jp-header .ui-slider-horizontal .ui-slider-range-max { right: 0; }
+
+.jp-header .ui-corner-all,
+.jp-playlist .ui-corner-all {
+	-moz-border-radius-topleft: 0px;
+	-webkit-border-top-left-radius: 0px;
+	-khtml-border-top-left-radius: 0px;
+	border-top-left-radius: 0px;
+}
+.jp-header .ui-corner-all,
+.jp-playlist .ui-corner-all {
+	-moz-border-radius-topright: 0px;
+	-webkit-border-top-right-radius: 0px;
+	-khtml-border-top-right-radius: 0px;
+	border-top-right-radius: 0px;
+}
+.jp-header .ui-corner-all,
+.jp-playlist .ui-corner-all {
+	-moz-border-radius-bottomleft: 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	-khtml-border-bottom-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+.jp-header .ui-corner-all,
+.jp-playlist .ui-corner-all {
+	-moz-border-radius-bottomright: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+	-khtml-border-bottom-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+/* @end */
+
+/* @group current time and duration */
+
+.jp-current-time, .jp-duration {
+	width:70px;
+	font-size:9px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.jp-current-time {
+	position:absolute;
+	top:13px;
+	left:57px;
+}
+
+.jp-duration {
+	position:absolute;
+	top:13px;
+	left:163px;
+}
+
+
+/* @end */
+
+/* @group playlist */
+.jp-playlist {
+	width:100%;
+	height: 123px;
+	overflow: hidden;
+}
+
+.jp-playlist .ui-state-default,
+.jp-playlist .ui-widget-content .ui-state-default,
+.jp-playlist .ui-widget-header .ui-state-default {
+	border: none;
+	background: #dedede none;
+}
+.jp-playlist .ui-state-hover,
+.jp-playlist .ui-widget-content .ui-state-hover,
+.jp-playlist .ui-widget-header .ui-state-hover,
+.jp-playlist .ui-state-focus,
+.jp-playlist .ui-widget-content .ui-state-focus,
+.jp-playlist .ui-widget-header .ui-state-focus {
+	border: none;
+	background: #fff none;
+	cursor:  pointer;
+}
+.jp-playlist .ui-state-active,
+.jp-playlist .ui-widget-content .ui-state-active,
+.jp-playlist .ui-widget-header .ui-state-active {
+	border: none;
+	background: #fff none;
+}
+
+.scroll-pane-vertical { overflow: hidden; height: 100%; width: 100%; }
+.scroll-content-vertical { width: 100%; height: auto; float: left; }
+
+.jp-playlist .ui-slider { position: relative; text-align: left; }
+.jp-playlist .ui-slider .ui-slider-handle { position: absolute; z-index: 2; width: 10px; height: 24px; cursor: default; }
+.jp-playlist .ui-slider-vertical { width: 9px; height: 100%; }
+.jp-playlist .ui-slider-vertical .ui-slider-handle { left: 0; margin-left: 0; margin-bottom: 0; background-color: #b1b1b1; }
+.scroll-bar-wrap-vertical {
+	padding: 0;
+	margin: 3px 5px 0 0;
+	width: 10px;
+	height: 96%;
+	float: right;
+	background: transparent;
+	border-right: 1px solid;
+	border-bottom: 1px solid;
+	border-left:1px solid;
+	border-top: 1px solid;
+	border-left-color: #000000;
+	border-top-color: #000000;
+	border-bottom-color: #616161;
+	border-right-color: #616161;
+}
+.scroll-bar-wrap-vertical .ui-slider { background: none; border:0; height: 100%; width: 9px; margin: 0;  }
+.scroll-bar-wrap-vertical .ui-handle-helper-parent { position: relative; width: 9px; height: 100%; margin: 0 auto; }
+.scroll-bar-wrap-vertical .ui-slider-handle { left:0em; width: 9px; background: #fff }
+.scroll-bar-wrap-vertical .ui-slider-handle .ui-icon { margin:  0; position: relative; left: 50%; }
+
+.jp-title ul,
+.jp-playlist ul {
+	list-style-type:none;
+	font-size:.7em;
+	margin: 0;
+	padding: 0;
+	width:100%;
+}
+
+.jp-playlist .with-scrollbar ul {
+	width: 173px; }
+
+.jp-title li,
+.jp-playlist li {
+	position: relative;
+	padding: 2px 0;
+	border-bottom:1px solid #fff;
+	border-bottom-color: #ffffff;
+	background-position: 5px 7px;
+	background-repeat: no-repeat;
+	background-image: url('../dashboard/img/jplayer/black_translucent/play_sm.png');
+	width:100%;
+	height:28px;
+}
+
+.jp-playlist .with-scrollbar ul li {
+	width: auto; }
+
+div.jp-playlist .info-wrapper {
+	display: inline-block;
+	width:145px;
+	margin: 0 0 0 25px;
+}
+
+.jp-title li{
+	border-bottom:none;
+	border-top:none;
+	padding:0;
+	text-align:center;
+}
+
+
+/* Note that the first-child (IE6) and last-child (IE6/7/8) selectors do not work on IE */
+div.jp-playlist ul li {
+	padding:3px 0 0 0;
+	height: 28px;
+	overflow: hidden;
+}
+.player-sm {
+	padding: 0 7px 0 5px;
+	vertical-align: middle;
+}
+.track-number{
+	margin: 0 7px 0 0;
+}
+
+.jp-playlist-item {
+	position:relative;
+	z-index: 1001;
+	white-space: nowrap;
+}
+
+.jp-track-title {
+	position: relative;
+	top:-4px;
+	padding: 4px 0 0 0;
+	white-space: nowrap;
+	line-height: 32px;
+}
+
+.jp-track-img {
+	padding: 0 6px 0 5px;
+}
+.jp-playlist-item-remove{
+	display: none;
+}
+
+div.jp-type-playlist div.jp-playlist a {
+	color: #fff;
+	text-decoration:none;
+}
+
+div.jp-type-playlist div.jp-playlist li.jp-playlist-current {
+	font-weight: 900;
+	background-position: 5px 7px;
+	background-repeat: no-repeat;
+	background-image: url('../dashboard/img/jplayer/black_translucent/play_sm_active.png');
+}
+
+div.jp-type-playlist div.jp-playlist a.jp-playlist-item-remove {
+	float:right;
+	display:inline;
+	text-align:right;
+	margin-left:10px;
+	font-weight:bold;
+	color:#8C7A99;
+}
+
+div.jp-type-playlist div.jp-playlist span.jp-free-media {
+	float: right;
+	display:inline;
+	text-align:right;
+	color:#8C7A99;
+}
+
+div.jp-type-playlist div.jp-playlist span.jp-free-media a{
+	color:#8C7A99;
+}
+
+div.jp-type-playlist div.jp-playlist span.jp-free-media a:hover{
+	color:#E892E9;
+}
+span.jp-artist {
+	font-size:.8em;
+	color:#8C7A99;
+}
+
+div.jp-jplayer audio,
+div.jp-jplayer {
+	width:0px;
+	height:0px;
+}
+
+div.jp-jplayer {
+	background-color: #000000;
+}
+
+/* @group NO SOLUTION error feedback */
+
+.jp-no-solution {
+	position:absolute;
+	width:390px;
+	margin-left:-202px;
+	left:50%;
+	top: 10px;
+
+	padding:5px;
+	font-size:.8em;
+	background-color:#3a2a45;
+	border-top:2px solid #554461;
+	border-left:2px solid #554461;
+	border-right:2px solid #180a1f;
+	border-bottom:2px solid #180a1f;
+	color:#FFF;
+	display:none;
+}
+
+.jp-no-solution a {
+	color:#FFF;
+}
+
+.jp-no-solution span {
+	font-size:1em;
+	display:block;
+	text-align:center;
+	font-weight:bold;
+}
+
+.jp-audio .jp-no-solution {
+	width:190px;
+	margin-left:-102px;
+}
+
+/* info wrapper */
+div.info-wrapper {
+	padding:0;
+	margin:0;
+	overflow:hidden;
+}
+
+div.info-wrapper-title {
+	width:168px;
+	line-height: 1.1;
+}
+
+div.info-wrapper-artist {
+	width:130px;
+}
+
+div.jp-playlist .info-wrapper {
+	display: inline-block;
+	width:145px;
+}
+
+div.translucent {
+	position: absolute;
+	top:0;
+	left:0;
+	height: 242px;
+	width:195px;
+	background-repeat: repeat;
+	background-position: bottom;
+	border-radius: 6px;
+	background-image: url('../dashboard/img/jplayer/black_translucent/player_black_translucent_square.png');
+}
+/* Moz Only styles */
+@-moz-document url-prefix()
+{
+	.jp-track-img {
+		vertical-align:top;
+		padding: 0 6px 0 5px;
+		margin-top:5px;
+	}
+}
+
+
+/* @end */
+/* Contact Form */
+
+.float_left
+{
+	float: left;
+}
+
+/* Only in Builder */
+.add_field_div
+{
+	margin-top: 2px;
+}
+
+.add_field
+{
+	cursor: pointer;
+	color: #317598;
+	font-size: 14px;
+}
+
+.add_field_desc
+{
+	color: #666666;
+	font-size: 11px;
+	margin-left: 12px;
+}
+
+.builder_td
+{
+	padding: 0;
+	width: 250px;
+}
+
+.builder_fieldset {
+	background-color: #FFFFFF;
+	border: 2px solid #68B0B9;
+	height: 100%;
+	padding: 10px;
+	text-align: left;
+	width: 220px;
+}
+
+#recipient_email_address,
+#instructions,
+#text_label,
+#textarea_label,
+#textarea_default_text,
+#dropdown_label,
+#dropdown_choices,
+#checkbox_label,
+#checkbox_choices,
+#radiobutton_label,
+#radiobutton_choices
+{
+	width: 210px;
+}
+
+#instructions,
+#textarea_default_text,
+#dropdown_choices,
+#checkbox_choices,
+#radiobutton_choices
+{
+	height: 70px;
+}
+
+#instructions {
+	resize: vertical;
+}
+
+#contact_form_builder_target
+{
+	width: 430px;
+	text-align: left;
+}
+
+#contact_form_builder_modal
+{
+	background-color: #ffffff;
+}
+
+.contact_form_container
+{
+	width: 375px;
+	margin-bottom: 20px;
+}
+
+
+#content #contacts input,	#content #contacts	textarea,
+.contact_form_textbox,	.contact_form_textbox	input,
+.contact_form_dropdown,	.contact_form_dropdown	select,
+.contact_form_textarea,	.contact_form_textarea	textarea,
+.contact_form_multi,	.contact_form_multi		input		/* for checkboxes and radiobuttons */
+{
+	display: -moz-inline-stack !important;
+	display: inline-block !important;
+	margin: 0 !important;
+	text-align: left;
+	resize: none;
+}
+
+/*
+ * this stylesheet is used both dashboard and public side.
+ * limit cursor-help for form building to dashboard side.
+ * possible bug: if a person names their page "website"... yep
+ */
+#website
+{
+	#content #contacts input,	#content #contacts	textarea,
+	.contact_form_textbox,	.contact_form_textbox	input,
+	.contact_form_dropdown,	.contact_form_dropdown	select,
+	.contact_form_textarea,	.contact_form_textarea	textarea,
+	.contact_form_multi,	.contact_form_multi		input		/* for checkboxes and radiobuttons */
+	{
+		cursor: move;
+	}
+}
+
+/*
+#content #contacts input, #content #contacts textarea
+{
+	width: 300px !important;
+}
+*/
+
+.contact_form_textbox,	.contact_form_textbox	input,
+.contact_form_dropdown,	.contact_form_dropdown	select,
+.contact_form_textarea,	.contact_form_textarea	textarea
+{
+	border-style: dotted;
+	border-width: 1px;
+	border-color: #444444;
+	width: 100% !important;
+}
+
+.contact_form_textarea, .contact_form_textarea	textarea
+{
+	height: 100px !important;
+}
+
+#content #contacts input:focus, #content #contacts textarea:focus, #content #contacts select:focus
+{
+/*	background-color:#ffffe3; */
+	border:1px solid #5D88D5;
+}
+
+/* Blarm */
+
+.contact_form_row						/* used only in builder */
+{
+	margin-bottom: 6px;
+}
+
+.contact_form_builder_instructions		/* used only in builder */
+{
+	margin: 10px 7px 0 40px;
+}
+
+.contact_form_instructions				/* used only in published page */
+{
+	width: 375px;
+	margin: 10px 0 10px 0;
+}
+
+.contact-form-builder-warning
+{
+	color: red;
+	background-color: #fff;
+	border: 0 solid red;
+	font-weight: bold;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+.x_delete,				/* used only in builder */
+.spacer_20px,			/* used in both builder and published page */
+.contact_form_label,	/* used in both builder and published page */
+.contact_form_element,	/* used in both builder and published page */
+.target_fieldset,		/* used only in builder */
+.contact_form_submit	/* used only in published page */
+{
+	display: -moz-inline-stack !important;
+	display: inline-block !important;
+}
+
+.contact_form_submit	/* used only in published page */
+{
+	text-align: center !important;
+	width: 85px !important;
+}
+
+.x_delete				/* used only in builder */
+{
+	width: 20px;
+	vertical-align: top;
+	cursor: pointer;
+}
+
+.spacer_20px			/* used in both builder and published page */
+{
+	width: 20px;
+}
+
+.contact_form_label		/* used in both builder and published page */
+{
+	text-align: left;
+	width: 100px;
+	vertical-align: top;
+	margin: 0 0 6px 0;
+}
+
+.contact_form_element	/* used in both builder and published page */
+{
+	text-align: left;
+	width: 225px;
+	margin: 0 0 6px 0;
+}
+
+.target_fieldset		/* used only in builder */
+{
+	width: 425px;
+	min-height: 375px;
+	background: #fff;
+	border:2px solid #68B0B9;
+}
+
+#contacts #gbimage		/* used only in published page */
+{
+	border: none;
+	background: #000000;
+	padding: 0;
+}
+
+table.borderless form 
+{
+margin-top: 0;
+}
+
+label.contact_form_instruction
+{
+background-color: #FFFFFF;
+}
