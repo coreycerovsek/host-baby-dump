@@ -15,7 +15,7 @@ var initAlbumUi = function() {
 
 var loadMissingCssJs = function() {
 	// font-awesome
-	var fontAwesomePath = "/dashboard/css/font-awesome/css/font-awesome.min.css";
+	var fontAwesomePath = "/~corey/www.cerovsek.com/dashboard/css/font-awesome/css/font-awesome.min.css";
 	var hasFontAwesomeCss = ($("link[href='" + fontAwesomePath + "']").length > 0);
 	if (hasFontAwesomeCss == false) {
 		$("<link href='" + fontAwesomePath + "' rel='stylesheet'>").appendTo("head");
