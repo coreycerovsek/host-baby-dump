@@ -30,7 +30,7 @@ div.jp-audio ul li {
 
 div.jp-audio a {
 	outline: none;
-	padding:0;
+	padding:0 0 0 25px;
 	margin:0;
 }
 
@@ -44,11 +44,15 @@ div.jp-header {
 	line-height: 2.0;
 }
 
-div.jp-header .current-title{
+div.jp-header .jp-title{
 	font-size: 14px;
 	position:relative;
 	white-space: nowrap;
 	width: auto;
+
+	text-overflow: ellipsis;
+	display: block;
+	overflow: hidden;
 }
 
 div.jp-header .current-artist{
@@ -133,7 +137,10 @@ div.jp-type-playlist .jp-play {
 	position:absolute;
 	top:0;
 	left:0;
+}
 
+a.jp-play:hover, a.jp-pause:hover {
+	background-color: transparent;
 }
 
 div.jp-type-playlist .jp-pause {
@@ -417,10 +424,10 @@ ul.jp-controls a.jp-unmute {
 .jp-playlist .with-scrollbar ul li {
 	width: auto; }
 
-div.jp-playlist .info-wrapper {
+div.jp-playlist li > div {
 	display: inline-block;
-	width:145px;
-	margin: 0 0 0 25px;
+	width:195px;
+	/* margin: 0 0 0 25px; */
 }
 
 .jp-title li{
@@ -451,12 +458,20 @@ div.jp-playlist ul li {
 	white-space: nowrap;
 }
 
-.jp-track-title {
+.jp-playlist-item {
 	position: relative;
 	top:-4px;
 	padding: 4px 0 0 0;
 	white-space: nowrap;
 	line-height: 32px;
+
+	text-overflow: ellipsis;
+	display: block;
+	overflow: hidden;
+}
+
+a.jp-playlist-item:hover {
+	background-color: transparent;
 }
 
 .jp-track-img {
@@ -565,12 +580,12 @@ div.info-wrapper-title {
 }
 
 div.info-wrapper-artist {
-	width:130px;
+	width:168px;
 }
 
-div.jp-playlist .info-wrapper {
+div.jp-playlist li > div {
 	display: inline-block;
-	width:145px;
+	width:195px;
 }
 
 div.translucent {
